@@ -1,7 +1,19 @@
 function Login(){
 
 return(
-<h1>Login Page</h1>
+
+<div className="container">
+
+<h1>
+Welcome to ShopEase
+</h1>
+
+<p>
+Your favourite online store.
+</p>
+
+</div>
+
 )
 
 }

@@ -1,7 +1,19 @@
 function Checkout(){
 
 return(
-<h1>Checkout Page</h1>
+
+<div className="container">
+
+<h1>
+Welcome to your checkout page
+</h1>
+
+<p>
+Your favourite online store.
+</p>
+
+</div>
+
 )
 
 }

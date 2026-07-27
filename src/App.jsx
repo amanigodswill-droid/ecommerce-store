@@ -11,6 +11,7 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
+import Navbar from "./components/Navbar";
 
 
 function App(){
@@ -18,6 +19,10 @@ function App(){
 return(
 
 <BrowserRouter>
+
+
+<Navbar/>
+
 
 <Routes>
 

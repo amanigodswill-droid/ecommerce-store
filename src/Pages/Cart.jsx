@@ -1,7 +1,19 @@
 function Cart(){
 
 return(
-<h1>Cart Page</h1>
+
+<div className="container">
+
+<h1>
+Your cart
+</h1>
+
+<p>
+Your favourite online store.
+</p>
+
+</div>
+
 )
 
 }
