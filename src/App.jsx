@@ -1,5 +1,5 @@
 import {
-BrowserRouter,
+HashRouter,
 Routes,
 Route
 } from "react-router-dom";
@@ -19,7 +19,7 @@ function App(){
 
 return(
 
-<BrowserRouter>
+<HashRouter>
 
 
 <Navbar/>
@@ -70,11 +70,9 @@ element={<Login/>}
 
 </Routes>
 
-</BrowserRouter>
+</HashRouter>
 
 )
 
 }
-
-
 export default App;
