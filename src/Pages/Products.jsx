@@ -1,9 +1,9 @@
-function ProductDetails(){
+function Products(){
 
 return(
-<h1>Products Details Page</h1>
+<h1>Products Page</h1>
 )
 
 }
 
-export default ProductDetails;
+export default Products;
