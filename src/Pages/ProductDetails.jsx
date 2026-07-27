@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 function ProductDetails() {
 
   const { id } = useParams();
-
   const [product, setProduct] = useState(null);
-
   const [loading, setLoading] = useState(true);
-
   const [error, setError] = useState("");
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
 
@@ -70,9 +70,12 @@ function ProductDetails() {
           {product.description}
         </p>
 
-        <button className="btn">
-          Add To Cart
-        </button>
+        <button
+  className="btn"
+  onClick={() => addToCart(product)}
+>
+  Add To Cart
+</button>
 
       </div>
 
