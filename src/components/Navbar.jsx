@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 
 function Navbar(){
+    
+  const { cartItems } = useContext(CartContext);
 
   return (
 
@@ -27,7 +31,7 @@ function Navbar(){
 
 
           <NavLink to="/cart">
-            Cart
+          Cart ({cartItems.length})
           </NavLink>
 
 
