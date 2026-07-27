@@ -1,21 +1,49 @@
-function Products(){
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-return(
+import ProductCard from "../components/ProductCard";
 
-<div className="container">
+function Products() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-<h1>
-Welcome to ShopEase
-</h1>
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch(() => {
+        setError("Unable to load products.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-<p>
-Your favourite online store.
-</p>
+  if (loading) {
+    return <h2 className="message">Loading products...</h2>;
+  }
 
-</div>
+  if (error) {
+    return <h2 className="message">{error}</h2>;
+  }
 
-)
+  return (
+    <div className="container">
+      <h1 className="page-title">Products</h1>
 
+      <div className="product-grid">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Products;
