@@ -1,20 +1,20 @@
-function Checkout(){
+function Checkout() {
 
-return(
+  return (
 
-<div className="container">
+    <div className="container">
 
-<h1>
-Welcome to your checkout page
-</h1>
+      <h1 className="page-title">
+        Checkout
+      </h1>
 
-<p>
-Your favourite online store.
-</p>
+      <p>
+        You are logged in and can proceed with your purchase.
+      </p>
 
-</div>
+    </div>
 
-)
+  );
 
 }
 

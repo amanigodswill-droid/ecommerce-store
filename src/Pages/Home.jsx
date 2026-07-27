@@ -9,7 +9,7 @@ Welcome to ShopEase
 </h1>
 
 <p>
-Your favourite online store.
+Your favourite online store.Get all your products at the best prices.
 </p>
 
 </div>

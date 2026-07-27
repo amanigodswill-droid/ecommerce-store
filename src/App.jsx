@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
 import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 function App(){
@@ -58,8 +59,12 @@ element={<Login/>}
 
 
 <Route
-path="/checkout"
-element={<Checkout/>}
+  path="/checkout"
+  element={
+    <ProtectedRoute>
+      <Checkout />
+    </ProtectedRoute>
+  }
 />
 
 
